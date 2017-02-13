@@ -43,14 +43,26 @@ $(document).ready(function() {
 			}
 		]
 	});
+
+	$('.product .slick-current').css('left', '70px');
+	$('.product .slick-current .product_circle').css('border', 'solid 1px #93bb85');
+	$('.product .slick-current').next().next().css('right', '70px');
+	$('.product_next').click(function(){
+		$('.product .slick-current').css('left', '70px');
+		$('.product .slick-current .product_circle').css('border', 'solid 1px #93bb85');
+		$('.product .slick-current').next().next().css('right', '70px');
+	});
+
+	//$('.product .slick-current').next().css('top', '200px');
+
 	$('.review_slider').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		nextArrow: '.review_next',
 		prevArrow: '.review_prev'
 	});
-	review_slider
-	var slickIndex = $('.slick-active').attr('data-slick-index');
+	
+	/*var slickIndex = $('.slick-active').attr('data-slick-index');
 
 	if (slickIndex == 1) {
 		$(this).css('border', '1px solid blue');
@@ -60,7 +72,10 @@ $(document).ready(function() {
 	}
 	else {
 		$(this).css('border', '1px solid green');
-	}
+	}*/
+	$('.bags_2_slider').owlCarousel({
+		items: 3
+	});
 	/*
 	// photo magnific gallery
 	$('.photo_popup').magnificPopup({

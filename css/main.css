@@ -382,13 +382,17 @@ header {
 	background-position: center bottom;
 	text-align: left;
 }
+.earn .row {
+	margin-bottom: 5rem;
+}
 .earn h3 {
 	margin-bottom: 7rem;
+	text-align: center;
 }
 .earn h4 {
 	font: 2.6rem "PT_Serif-Web-Bold", sans-serif;
 	color: #5a1b52;
-	margin: 4.2rem 0 5rem;
+	margin: 4rem 0 5rem;
 }
 .earn p {
 	line-height: 2.8rem;
@@ -420,6 +424,7 @@ header {
 .cert {
 	background-image: url(../img/cert_bg.png);
 	background-position: 45% top;
+	top: -60px;
 }
 .cert h3 {
 	color: #424242;
@@ -449,6 +454,10 @@ header {
 	background-color: transparent;
 	left: 70px;
 }
+.product {
+	padding-top: 0;
+	top: -30px;
+}
 .product h4 {
 	color: #424242;
 	font: 3rem "PT_Serif-Web-Bold", sans-serif;
@@ -470,18 +479,31 @@ header {
 	position: absolute;
 	bottom: 0;
 	right: 0;
-	left: 0
+	left: 0;
 	top: 0;
 	margin: auto;
 }
 .product .slick-cloned {
-	opacity: 0;
+	overflow: hidden;
 }
-.product .slick-cloned.slick-active {
-	opacity: 1;
+.product .slick-slide {
+	position: relative;
+	display: none;
 }
-.product .slick-current .product_circle {
+.product .product_circle {
+	margin: 0 auto;
+}
+/*.product .slick-current .product_circle {
 	border: solid 1px #93bb85;
+}*/
+.product .slick-active:first-of-type {
+	left: 100px;
+	position: relative;
+}
+.product .slick-active:nth-of-type(2) {
+	position: relative;
+	z-index: 222;
+	top: 100px;
 }
 /*.product .slick-active:nth-of-type(2) .product_circle {
 	border: solid 1px #edd8c8;
